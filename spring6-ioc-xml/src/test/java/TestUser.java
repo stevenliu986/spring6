@@ -16,7 +16,17 @@ public class TestUser {
     @Test
     void testUser01(){
         ApplicationContext cxt = new ClassPathXmlApplicationContext("bean.xml");
-        User user = (User) cxt.getBean("user");
-        user.run();
+
+        // 根据id来获取bean
+        User user01 = (User) cxt.getBean("user");
+        user01.run();
+
+        // 根据类型来获取bean
+        User user02 = cxt.getBean(User.class);
+        user02.run();
+
+        // 根据id和类型来获取bean
+        User user03 = cxt.getBean("user", User.class);
+        user03.run();
     }
 }
