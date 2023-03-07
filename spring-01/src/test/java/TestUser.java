@@ -1,5 +1,8 @@
 import com.learning.spring6.User;
 import org.junit.jupiter.api.Test;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,6 +15,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @Create: 8/03/2023
  */
 public class TestUser {
+
+    private Logger logger = LoggerFactory.getLogger(TestUser.class);
     @Test
     void testUser01(){
         // 加载sp;ring配置文件，对象创建
@@ -22,6 +27,9 @@ public class TestUser {
 
         // 使用对象调用方法进行测试
         user.add();
+
+        // 手动写入日志
+        logger.info("调用执行成功。 ");
     }
 
     /**
