@@ -23,4 +23,13 @@ public class TestUser {
         // 使用对象调用方法进行测试
         user.add();
     }
+
+    /**
+     * 利用反射机制创建对象
+     */
+    void testUser02() throws Exception {
+        Class clazz = Class.forName("com.learning.spring6.User");
+        User user = (User) clazz.getDeclaredConstructor().newInstance();
+        System.out.println(user);
+    }
 }
