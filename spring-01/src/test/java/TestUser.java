@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class TestUser {
     @Test
-    void testUser(){
+    void testUser01(){
         // 加载sp;ring配置文件，对象创建
         ApplicationContext cxt = new ClassPathXmlApplicationContext("bean.xml");
 
@@ -27,6 +27,7 @@ public class TestUser {
     /**
      * 利用反射机制创建对象
      */
+    @Test
     void testUser02() throws Exception {
         Class clazz = Class.forName("com.learning.spring6.User");
         User user = (User) clazz.getDeclaredConstructor().newInstance();
