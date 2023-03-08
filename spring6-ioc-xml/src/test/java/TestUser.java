@@ -1,6 +1,6 @@
 import com.learning.spring6.iocxml.User;
 import com.learning.spring6.iocxml.bean.UserDao;
-import com.learning.spring6.iocxml.bean.UserDaoImpl;
+import com.learning.spring6.iocxml.di.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -40,5 +40,19 @@ public class TestUser {
 
         UserDao personDao = cxt.getBean("personDao", UserDao.class);
         personDao.run();
+    }
+
+
+    @Test
+    void testBook(){
+        ApplicationContext cxt = new ClassPathXmlApplicationContext("bean-di.xml");
+        Book book =cxt.getBean("book", Book.class);
+        String bookName = book.getBname();
+        String author = book.getAuthor();
+        System.out.println(bookName + ":" + author);
+
+        Book book1 = cxt.getBean("book1", Book.class);
+        System.out.println(book1.getBname());
+        System.out.println(book1.getAuthor());
     }
 }

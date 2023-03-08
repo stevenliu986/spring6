@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--依赖注入 - set方式-->
+    <bean id="book" class="com.learning.spring6.iocxml.di.Book">
+        <property name="bname" value="Java"/>
+        <property name="author" value="Menning.com"/>
+    </bean>
+
+    <!--依赖注入 - 构造器方式-->
+    <bean id="book1" class="com.learning.spring6.iocxml.di.Book">
+        <constructor-arg value="C++"/>
+        <constructor-arg value="Apress.com"/>
+    </bean>
+</beans>
