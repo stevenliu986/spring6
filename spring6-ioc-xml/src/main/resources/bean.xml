@@ -4,4 +4,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="user" class="com.learning.spring6.iocxml.User"></bean>
+    <bean id="userDao" class="com.learning.spring6.iocxml.bean.UserDaoImpl"></bean>
 </beans>
