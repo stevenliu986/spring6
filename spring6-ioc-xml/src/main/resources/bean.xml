@@ -5,4 +5,5 @@
 
     <bean id="user" class="com.learning.spring6.iocxml.User"></bean>
     <bean id="userDao" class="com.learning.spring6.iocxml.bean.UserDaoImpl"></bean>
+    <bean id="personDao" class="com.learning.spring6.iocxml.bean.PersonDaoImpl"></bean>
 </beans>

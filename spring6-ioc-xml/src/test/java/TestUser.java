@@ -35,7 +35,10 @@ public class TestUser {
     @Test
     void testUserDao(){
         ApplicationContext cxt = new ClassPathXmlApplicationContext("bean.xml");
-        UserDao userDao = cxt.getBean(UserDao.class);
-        System.out.println(userDao);
+        UserDao userDao = cxt.getBean("userDao",UserDao.class);
+        userDao.run();
+
+        UserDao personDao = cxt.getBean("personDao", UserDao.class);
+        personDao.run();
     }
 }

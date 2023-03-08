@@ -9,4 +9,5 @@ package com.learning.spring6.iocxml.bean;
  * @Create: 8/03/2023
  */
 public interface UserDao {
+    void run();
 }
