@@ -1,6 +1,7 @@
 import com.learning.spring6.iocxml.User;
 import com.learning.spring6.iocxml.bean.UserDao;
 import com.learning.spring6.iocxml.di.Book;
+import com.learning.spring6.iocxml.di.Employee;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -54,5 +55,12 @@ public class TestUser {
         Book book1 = cxt.getBean("book1", Book.class);
         System.out.println(book1.getBname());
         System.out.println(book1.getAuthor());
+    }
+
+    @Test
+    void testDeptEmp(){
+        ApplicationContext cxt = new ClassPathXmlApplicationContext("bean-di.xml");
+        Employee emp = cxt.getBean("emp", Employee.class);
+        emp.work();
     }
 }

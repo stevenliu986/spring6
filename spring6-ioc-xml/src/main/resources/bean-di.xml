@@ -13,4 +13,14 @@
         <constructor-arg value="C++"/>
         <constructor-arg value="Apress.com"/>
     </bean>
+
+    <bean id="dept" class="com.learning.spring6.iocxml.di.Dept">
+        <property name="deptName" value="工程部"/>
+    </bean>
+
+    <bean id="emp" class="com.learning.spring6.iocxml.di.Employee">
+        <property name="empName" value="张飞"/>
+        <property name="age" value="29"/>
+        <property name="dept" ref="dept"/>
+    </bean>
 </beans>
