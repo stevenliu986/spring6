@@ -71,4 +71,11 @@ public class TestUser {
         Student student = cxt.getBean(Student.class);
         student.run();
     }
+
+    @Test
+    void testStudentP(){
+        ApplicationContext cxt = new ClassPathXmlApplicationContext("bean-di-ref.xml");
+        Student student = cxt.getBean("student_p", Student.class);
+        student.run();
+    }
 }
