@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/beans/spring-util.xsd">
+
+    <!--
+        1. 创建对象
+        2. 注入普通类型属性
+        3. 使用util: 类型定义
+        4. 在学生bean引入util:类型定义bean，完成list类型属性注入
+    -->
+    <bean id="lesson" class="com.learning.spring6.iocxml.di.Course">
+        <property name="courseName" value="Java"/>
+    </bean>
+    <bean id="student" class="com.learning.spring6.iocxml.di.Student">
+        <property name="name" value="张飞"/>
+        <property name="id" value="3001"/>
+        <!--注入list属性-->
+        <property name="lessonList" ref="lessonList"/>
+    </bean>
+    <util:list id="lessonList">
+        <ref bean="lesson"/>
+    </util:list>
+</beans>
