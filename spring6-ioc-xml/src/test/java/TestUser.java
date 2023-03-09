@@ -2,6 +2,7 @@ import com.learning.spring6.iocxml.User;
 import com.learning.spring6.iocxml.bean.UserDao;
 import com.learning.spring6.iocxml.di.Book;
 import com.learning.spring6.iocxml.di.Employee;
+import com.learning.spring6.iocxml.di.Student;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -62,5 +63,12 @@ public class TestUser {
         ApplicationContext cxt = new ClassPathXmlApplicationContext("bean-di.xml");
         Employee emp = cxt.getBean("emp", Employee.class);
         emp.work();
+    }
+
+    @Test
+    void testStudentAndLessonList(){
+        ApplicationContext cxt = new ClassPathXmlApplicationContext("bean-di-ref.xml");
+        Student student = cxt.getBean(Student.class);
+        student.run();
     }
 }
