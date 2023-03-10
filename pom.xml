@@ -11,6 +11,7 @@
     <modules>
         <module>spring-01</module>
         <module>spring6-ioc-xml</module>
+        <module>spring6-ioc-annotation</module>
     </modules>
 
     <properties>

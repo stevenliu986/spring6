@@ -1,4 +1,5 @@
 import com.learning.spring6.iocxml.User;
+import com.learning.spring6.iocxml.auto.controller.UserController;
 import com.learning.spring6.iocxml.bean.UserDao;
 import com.learning.spring6.iocxml.di.Book;
 import com.learning.spring6.iocxml.di.Employee;
@@ -77,5 +78,13 @@ public class TestUser {
         ApplicationContext cxt = new ClassPathXmlApplicationContext("bean-di-ref.xml");
         Student student = cxt.getBean("student_p", Student.class);
         student.run();
+    }
+
+
+    @Test
+    void testAuto(){
+        ApplicationContext cxt = new ClassPathXmlApplicationContext("bean-auto.xml");
+        UserController userController = cxt.getBean("userController", UserController.class);
+        userController.addUser();
     }
 }
