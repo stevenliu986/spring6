@@ -1,5 +1,7 @@
 package com.learning.spring6.aop.anno;
 
+import org.springframework.stereotype.Component;
+
 /**
  * ClassName: CalculatorImpl
  * Package: com.learning.spring6.aop.example
@@ -8,6 +10,7 @@ package com.learning.spring6.aop.anno;
  * @Author: Steven_LIU
  * @Create: 11/03/2023
  */
+@Component
 public class CalculatorImpl implements Calculator {
     @Override
     public int add(int i, int j) {

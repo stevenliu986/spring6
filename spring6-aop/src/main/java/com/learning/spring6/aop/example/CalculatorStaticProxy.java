@@ -1,5 +1,7 @@
 package com.learning.spring6.aop.example;
 
+import com.learning.spring6.aop.anno.Calculator;
+
 /**
  * ClassName: CalculatorStaticProxy
  * Package: com.learning.spring6.aop.example
@@ -8,7 +10,7 @@ package com.learning.spring6.aop.example;
  * @Author: Steven_LIU
  * @Create: 11/03/2023
  */
-public class CalculatorStaticProxy implements Calculator{
+public class CalculatorStaticProxy implements Calculator {
 
     // 被代理目标对象传递进来
     private Calculator calculator;
