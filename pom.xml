@@ -12,6 +12,7 @@
         <module>spring-01</module>
         <module>spring6-ioc-xml</module>
         <module>spring6-ioc-annotation</module>
+        <module>spring6-aop</module>
     </modules>
 
     <properties>
@@ -25,6 +26,19 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>6.0.5</version>
+        </dependency>
+
+        <!--spring aop依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>6.0.5</version>
+        </dependency>
+        <!--spring aspects依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>6.0.2</version>
         </dependency>
 
         <dependency>
